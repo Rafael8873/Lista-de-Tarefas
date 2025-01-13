@@ -1,0 +1,103 @@
+@charset "UTF-8";        
+
+:root {
+            --primary-color: #005f73;
+            --secondary-color: #94d2bd;
+            --accent-color: #e9d8a6;
+            --background-color: #f4f1de;
+            --text-color: #001219;
+            --dark-mode-bg: #001219;
+            --dark-mode-text: #f4f1de;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: var(--secondary-color);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark-mode {
+            background-color: var(--dark-mode-bg);
+            color: var(--dark-mode-text);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, textarea, select, button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--accent-color);
+        }
+
+        .task-list {
+            margin-top: 20px;
+            background-color: var(--background-color);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .task {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            background-color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .filters, .import-export, .dark-mode-toggle {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: var(--background-color);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .filters select, .import-export button, .dark-mode-toggle label {
+            margin-top: 10px;
+        }
+
+        .dark-mode-toggle input {
+            margin-right: 5px;
+        }

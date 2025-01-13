@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+
+        <!-- Formulário para Adicionar/Editar Tarefas -->
+        <form id="task-form">
+            <input type="hidden" id="task-id">
+            <label for="task-title">Título:</label>
+            <input type="text" id="task-title" placeholder="Digite o título da tarefa" required>
+
+            <label for="task-desc">Descrição:</label>
+            <textarea id="task-desc" placeholder="Digite a descrição da tarefa" rows="3" required></textarea>
+
+            <label for="task-priority">Prioridade:</label>
+            <select id="task-priority" required>
+                <option value="">Selecione</option>
+                <option value="Baixa">Baixa</option>
+                <option value="Média">Média</option>
+                <option value="Alta">Alta</option>
+            </select>
+
+            <label for="task-date">Data de Conclusão:</label>
+            <input type="date" id="task-date" required>
+
+            <button type="submit">Salvar Tarefa</button>
+        </form>
+
+        <!-- Filtros e Opções de Ordenação -->
+        <div class="filters">
+            <h2>Filtros</h2>
+            <label for="filter-status">Estado:</label>
+            <select id="filter-status">
+                <option value="">Todos</option>
+                <option value="Pendentes">Pendentes</option>
+                <option value="Concluídas">Concluídas</option>
+            </select>
+
+            <label for="filter-priority">Prioridade:</label>
+            <select id="filter-priority">
+                <option value="">Todas</option>
+                <option value="Baixa">Baixa</option>
+                <option value="Média">Média</option>
+                <option value="Alta">Alta</option>
+            </select>
+
+            <label for="sort-tasks">Ordenar por:</label>
+            <select id="sort-tasks">
+                <option value="">Selecione</option>
+                <option value="date">Data de Conclusão</option>
+                <option value="priority">Prioridade</option>
+            </select>
+        </div>
+
+        <!-- Lista de Tarefas -->
+        <div class="task-list" id="task-list">
+            <h2>Minhas Tarefas</h2>
+        </div>
+
+        <!-- Botões para Exportar/Importar -->
+        <div class="import-export">
+            <h2>Exportar/Importar</h2>
+            <button id="export-tasks">Exportar Tarefas</button>
+            <input type="file" id="import-tasks" accept="application/json">
+        </div>
+
+        <!-- Alternar Modo Escuro -->
+        <div class="dark-mode-toggle">
+            <label>
+                <input type="checkbox" id="toggle-dark-mode"> Modo Escuro
+            </label>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
